@@ -7,6 +7,19 @@
   height: 100vh;
 }
 
+/* .background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  background-color: #f0f0f0;
+  height: 100vh;
+} */
+
+.language-button {
+  width: 120px; /* กำหนดความกว้างของปุ่ม */
+}
+
 .triangle-text {
   text-align: center; 
   margin-top: 10px;

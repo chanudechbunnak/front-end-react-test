@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { Button, Card, Row, Col, Grid } from 'antd';
-import './App.css'; // Import CSS file or SCSS file
+import { Button, Card, Row, Col, Grid, Select } from 'antd';
+import './App.css'; 
+import { useTranslation } from 'react-i18next';
 
 const { useBreakpoint } = Grid;
+const { Option } = Select;
 
 const App: React.FC = () => {
   const [isGridUp, setIsGridUp] = useState(true);
   const [marginLeft, setMarginLeft] = useState(0);
+  const [language, setLanguage] = useState('en')
 
   const screens = useBreakpoint();
 
@@ -22,9 +25,28 @@ const App: React.FC = () => {
     setIsGridUp(!isGridUp);
   };
 
+  const handleChangeLanguage = (value: string) => {
+    setLanguage(value);
+};
+
   return (
+    // <div >     
+    // <Select defaultValue="en" className="language-button" onChange={handleChangeLanguage}>
+    //     <Option value="en">English</Option>
+    //   <Option value="th">ไทย</Option>
+    // </Select>
     <div className="container">
-      {/* Triangles */}
+      <div className="container">
+      <Row justify="end" align="middle">
+        <Col>
+        </Col>
+        <Col>
+          <Select defaultValue="en" className="language-button" onChange={handleChangeLanguage}>
+            <Option value="en">English</Option>
+            <Option value="th">ไทย</Option>
+          </Select>
+        </Col>
+      </Row>
       <div className="triangle-container">
         <Card className="shape-card" onClick={handleMoveLeft}>
           <div className={`left-triangle`}></div>
@@ -44,7 +66,6 @@ const App: React.FC = () => {
         </Card>
       </div>
 
-      {/* Shapes */}
       <div className={`shapes-container ${isGridUp ? 'grid-up' : 'grid-down'}`}>
         <div className="shape-row" style={{ marginLeft: `${marginLeft}px` }}>
           <Card className="shape-card">
@@ -73,6 +94,7 @@ const App: React.FC = () => {
           </Card>
         </div>
       </div>
+    </div>
     </div>
   );
 }

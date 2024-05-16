@@ -1,4 +1,6 @@
 {
-    "hello": "Hello",
-    "welcome": "Welcome"
+    "Move position": "Move Position",
+    "Move left": "Move left",
+    "Move right": "Move right",
+    "random": "random"
   }
