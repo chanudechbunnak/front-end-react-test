@@ -1,4 +1,131 @@
-.App {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  background-color: #f0f0f0;
+  height: 100vh;
+}
+
+.triangle-text {
+  text-align: center; 
+  margin-top: 10px;
+}
+
+.shapes-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f0f0f0;
+}
+
+.shape-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px; 
+  margin: 8px;
+  cursor: pointer;
+}
+
+.shape-card:hover {
+  background-color: #ffa200;
+}
+
+.shape-card.clicked {
+  background-color: #6eda78;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+}
+
+.triangle-container {
+  display: flex;
+  gap: 20px;
+}
+
+.rectangle-container {
+  display: flex;
+  gap: 20px;
+}
+
+.left-triangle {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-right: 50px solid gray;
+}
+
+.up-triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid gray;
+}
+
+.down-triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 50px solid gray;
+}
+
+.right-triangle {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid gray; 
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+}
+
+.rectangle {
+  width: 200px;
+  height: 100px;
+  background-color: gray; 
+}
+
+.trapezoid {
+  width: 120px;
+  height: 0;
+  border-bottom: 100px solid gray; 
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: gray; 
+  border-radius: 50%; 
+}
+
+.ellipse {
+  width: 200px;
+  height: 100px;
+  background-color: gray; 
+  border-radius: 50%; 
+}
+
+.parallelogram {
+  width: 150px;
+  height: 100px;
+  background-color: gray;
+  transform: skew(20deg); 
+}
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +162,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
